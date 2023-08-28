@@ -23,6 +23,7 @@ BuildRequires: cmake(Qt5Svg)
 BuildRequires: cmake(KF5Kirigami2)
 BuildRequires: cmake(KF5ItemModels)
 BuildRequires: kirigami
+BuildRequires: kpackage
 BuildRequires: appstream
 Requires: kirigami
 
