@@ -19,6 +19,7 @@ BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Qml)
 BuildRequires: cmake(Qt5QuickControls2)
 BuildRequires: cmake(Qt5Widgets)
+BuildRequires: cmake(Qt5Svg)
 BuildRequires: kirigami
 Requires: kirigami
 
