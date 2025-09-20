@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kirigami-gallery
-Version: 23.08.4
-Release: %{?git:0.%{git}.}2
+Version: 25.08.1
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:        https://invent.kde.org/sdk/%{name}/-/archive/master/%{name}-master.tar.bz2
 %else
@@ -14,25 +14,22 @@ License: GPL
 Group: Development/Tools
 BuildRequires: cmake ninja
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(Qt5Core)
-BuildRequires: cmake(Qt5Gui)
-BuildRequires: cmake(Qt5Qml)
-BuildRequires: cmake(Qt5QuickControls2)
-BuildRequires: cmake(Qt5Widgets)
-BuildRequires: cmake(Qt5Svg)
-BuildRequires: cmake(KF5Kirigami2)
-BuildRequires: cmake(KF5ItemModels)
-BuildRequires: kirigami
-BuildRequires: kpackage
-BuildRequires: appstream
-Requires: kirigami
+BuildRequires: cmake(Qt6Core)
+BuildRequires: cmake(Qt6Gui)
+BuildRequires: cmake(Qt6Qml)
+BuildRequires: cmake(Qt6QuickControls2)
+BuildRequires: cmake(Qt6Widgets)
+BuildRequires: cmake(Qt6Svg)
+BuildRequires: cmake(KF6Kirigami2)
+BuildRequires: cmake(KF6ItemModels)
 
 %description
 Kirigami component gallery application
 
 %prep
 %autosetup -p1
-%cmake_kde5 -G Ninja
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
 %ninja_build -C build
