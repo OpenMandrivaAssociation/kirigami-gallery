@@ -20,6 +20,7 @@ BuildRequires: cmake(Qt6Qml)
 BuildRequires: cmake(Qt6QuickControls2)
 BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6Svg)
+BuildRequires: cmake(Qt6LinguistTools)
 BuildRequires: cmake(KF6Kirigami2)
 BuildRequires: cmake(KF6ItemModels)
 
