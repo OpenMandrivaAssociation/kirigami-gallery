@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kirigami-gallery
-Version: 25.08.3
+Version: 25.12.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0:        https://invent.kde.org/sdk/%{name}/-/archive/master/%{name}-master.tar.bz2
